@@ -38,7 +38,7 @@ while read -r label value; do
             class="$value"
             ;;
         Data:)
-            byte_order="$value"
+            byte_order="${value#*, }"
             ;;
         Entry)
             entry_point_address="${value##* }"
